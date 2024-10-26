@@ -10,6 +10,7 @@ int registro()
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
+	int opcao=0;
 	//inserindo cpf
   int y=1;
 	 while (y==1)//loop de validacao do formato do cpf
@@ -83,6 +84,29 @@ int registro()
 	file=fopen(arquivo,"a");
 	fprintf(file,",");
 	fclose(file);
+	
+	printf("\nGostaria de cadastrar outro usuário?\n");
+	printf("\nDigite '1' para SIM e '2' para NAO: ");
+	
+	scanf("%d", &opcao);
+		
+	system("cls");
+
+	switch(opcao)
+	{
+		case 1:
+		registro();
+		break;
+		
+		case 2:
+		system("pause");
+		break;
+			
+		default:
+		printf("Essa opção não está disponível!\n");
+		system("pause"); 
+		break;
+	}
 
 	
 }
