@@ -190,7 +190,8 @@ int main()
 	 printf("Selecione uma opção do menu:\n\n");
 	 printf("\t1 - Adicionar um cadastro.\n");
 	 printf("\t2 - Consultar um cadastro.\n");
-	 printf("\t3 - Excluir um cadastro.\n\n");
+	 printf("\t3 - Excluir um cadastro.\n");
+	 PRINTF("\t4 - Encerrar Sistema.\n\n");
 	
 	 if (scanf("%d",&opcao)!=1)//validacao que os caracteres inseridos sao validos no menu
 	 {
@@ -216,6 +217,11 @@ int main()
 		case 3:
 	 	 excluir();
 		break;
+		
+		case 4:
+			printf("Obrigado por utilizar nosso sistema!");
+			return 0;
+			break;
 		
 		default:
 		 printf("Essa opção não é valida\n");
